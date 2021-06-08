@@ -118,5 +118,25 @@ console.log(nameWithComma)
 let nameWithSpace = studentsName.join(' ')
 console.log(nameWithSpace)
 
+//добавить всем студентам св-во isStudent
+let trueStudents = students.map(st => ({...st, isStudent: true}))
+console.log(trueStudents)
+
+//John женился, изменить
+let studentJohnIsMarried = students.map(st => st.name === 'John' ? {...st,isMarried: true} : st)
+console.log(studentJohnIsMarried)
+
+//найти студента по имени Bob
+let Bob = students.find(st => st.name === 'Bob')
+console.log(Bob)
+
+//студент с самым высоким баллом
+let bestStudent = students.reduce((acc, st) => acc.scores > st.scores ? acc : st)
+console.log(bestStudents)
+
+//sum scores for all students
+let sumScoresStudents = students.reduce((acc,st) => acc + st.scores, 0)
+console.log(sumScoresStudents)
+
 //
 
