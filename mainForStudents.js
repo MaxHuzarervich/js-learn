@@ -51,7 +51,7 @@ let copyUser = {...user};      //new object
  console.log(user.friends===copyUser.friends)  //true
 
 //2. Полная (глубокая) копия объекта user
-let deepCopyUser = {...user, friends: [...user['friends']]};
+let deepCopyUser = {...user, friends: [...user.friends]};
 
 //Проверка:
 console.log(user===copyUser)   //false
